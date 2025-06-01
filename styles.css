@@ -293,3 +293,76 @@ h2{
     text-decoration: none;
     font-family: Inter;
 }
+#faq-div {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.details {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+
+.faq-questions {
+  position: relative;
+  padding: 16px 50px 16px 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  font-family: Poppins;
+}
+
+
+.faq-questions::-webkit-details-marker,
+.faq-questions::marker {
+  display: none;
+}
+
+
+.faq-questions::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%) rotate(45deg);
+  border: solid #333;
+  border-width: 2px 2px 0 0;
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+
+.details[open] .faq-questions::after {
+  transform: translateY(-50%) rotate(135deg);
+}
+
+
+.faq-answers {
+  padding: 0 16px 16px 16px;
+  line-height: 1.6;
+  color: #444;
+  font-family: Inter;
+}
+footer{
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 12px;
+    justify-content: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    line-height: 100%;
+}
