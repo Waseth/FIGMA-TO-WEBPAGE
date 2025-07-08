@@ -1,368 +1,509 @@
-html{
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Styles */
+html {
     font-size: 16px;
 }
-body{
+
+body {
     background-color: #FFF8F0;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     line-height: 24px;
     color: #55206D;
-    margin: 0;
-    padding: 0;
 }
-h1{
+
+h1 {
     font-family: "League Spartan", sans-serif;
-    font-size: 48px;
+    font-size: 2.5rem;
     font-weight: 700;
-    line-height: 50px;
+    line-height: 1.1;
     color: #190D37;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin: 10px 0 30px;
 }
-h2{
+
+h2 {
     font-family: "League Spartan", sans-serif;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 1.8rem;
+    line-height: 1.1;
     color: #190D37;
+    margin-bottom: 20px;
 }
-.bigtext{
-    color:#331E6A;
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+h6 {
+    font-size: 0.75rem;
+}
+
+.bigtext {
+    color: #331E6A;
     font-family: "Poppins", sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
-#hero-section{
-    display: flex;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-#hero-text{
-    width: 50%;
-    padding: 32px 20px 32px 20px;
-}
-#image-wrapper{
-    width: 50%;
-}
-#hero-image{
-    width: 100%;
-    border-bottom-left-radius: 120px;
-}
-.small-text{
+
+.small-text {
     font-family: "Inter", sans-serif;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
     line-height: 14px;
     color: black;
+    padding: 10px 0;
 }
-#hi-and-name{
-    margin-top: 52px;
+
+/* Hero Section */
+#hero-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
-#contact-button{
+
+#hero-text {
+    width: 100%;
+    padding: 20px;
+    order: 2;
+}
+
+#image-wrapper {
+    width: 100%;
+    order: 1;
+}
+
+#hero-image {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    border-bottom-left-radius: 120px;
+}
+
+#hi-and-name {
+    margin-top: 20px;
+}
+
+#contact-button {
     height: 44px;
     width: 138px;
     border-radius: 4px;
     background-color: #2F2F2F;
     font-family: Inter;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 19px;
     margin-top: 20px;
     cursor: pointer;
+    border: none;
 }
-.blue-heading{
+
+/* What I Do Section */
+.blue-heading {
     font-family: Poppins;
-    color:#2858FF;
+    color: #2858FF;
     text-align: center;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 100%;
     letter-spacing: 0%;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
-.what-i-do{
+
+.what-i-do {
     text-align: center;
     font-family: League Spartan;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 1.8rem;
+    line-height: 1.2;
     color: black;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px auto 20px;
+    max-width: 800px;
+    padding: 0 20px;
 }
-.what-i-do-description{
+
+.what-i-do-description {
     margin: 0 auto;
     text-align: center;
-    width: 680px;
+    max-width: 680px;
     font-family: Poppins;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 100%;
-    padding: 0 -50px 0 -50px;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    padding: 0 20px 20px;
 }
-#card-div{
+
+/* Cards Section */
+#card-div {
     display: flex;
-    margin: 40px 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
 }
-.cards{
+
+.cards {
     background-color: #FFFFFF;
-    margin: 10px 20px 10px;
-    border-radius:10px;
-    width: 400px;
-    box-shadow: 2px 2px 1px grey;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
 }
-.field{
+
+.cards:hover {
+    transform: translateY(-5px);
+}
+
+.field {
     text-align: center;
     font-family: Poppins;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 100%;
     color: black;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
-.field-description{
-    padding: 10px;
+
+.field-description {
     text-align: center;
     font-family: Inter;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 1.5;
     color: #55206D;
 }
-.project-div{
-    display: flex;
-    margin: 0 auto;
-    width: 1000px;
-    margin-top: 60px;
 
+/* Projects Section - Updated */
+.project-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
 }
-.project-name-description{
-    height:120px;
+
+.project-name-description {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
 }
-.project-name{
+
+.project-name {
     font-family: Poppins;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
-.project-description{
+
+.project-description {
     font-family: Inter;
-    margin-top: -10px;
+    margin-bottom: 15px;
 }
-#project-card-one{
+
+/* Equal-sized project cards */
+#project-card-one,
+#project-card-two,
+#project-card-three {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0 auto;
+}
+
+#project-card-one {
     background-color: #19ACFF;
-    width: 300px;
-    height: 170px;
-    border-radius: 10px;
-    margin-right: 30px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
-    font-family: Poppins;
-    font-weight: 700;
-    font-size: 48px;
 }
-#project-card-two{
+
+#project-card-two {
     background-color: #FFE819;
-    width: 350px;
-    height: 170px;
-    border-radius: 10px;
-    margin-right: 30px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: black;
-    font-family: Poppins;
-    font-weight: 700;
-    font-size: 48px;
 }
-#project-card-three{
+
+#project-card-three {
     background-color: #FF1919;
-    width: 300px;
-    height: 170px;
-    border-radius: 10px;
-    margin-right: 30px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-    font-family: Poppins;
-    font-weight: 700;
-    font-size: 48px;
+    color: white;
 }
-.project-links{
+
+.project-links {
     text-decoration: none;
+    color: #55206D;
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s;
+    display: inline-block;
+    margin-top: 10px;
 }
-.project-links:hover{
+
+.project-links:hover {
     border-bottom: 1px solid black;
 }
-#pricing-div{
-    display: flex;
-    gap:50px;
-    width: 1060px;
-    margin: 0 auto;
-    margin-top: 60px;
 
+/* Pricing Section */
+#pricing-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1060px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
-.heading-card-one{
+
+.heading-card-one {
     color: #2858FF;
     font-family: Poppins;
     font-weight: 500;
-    font-size: 14px;
-
+    font-size: 0.875rem;
+    margin-bottom: 10px;
 }
-#heading-card-two{
+
+#heading-card-two {
     color: black;
     font-family: Poppins;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
+    margin-bottom: 10px;
 }
-.price{
+
+.price {
     font-family: Poppins;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 2rem;
     color: black;
 }
-.per-page{
-  margin-left: 4px;
-  font-family: Poppins;
-  color: #8A8A8A;
+
+.per-page {
+    margin-left: 4px;
+    font-family: Poppins;
+    color: #8A8A8A;
+    font-size: 1rem;
 }
-.pricing-cards{
+
+.pricing-cards {
     background-color: #FFFFFF;
-    padding-left: 20px;
+    padding: 20px;
     border-radius: 10px;
-    width: 340px;
-    overflow: auto;
-    padding-right: 10px;
+    width: 100%;
+    max-width: 340px;
 }
-#pricing-cards{
+
+#pricing-cards {
     background-color: #FFD748;
-    padding-left: 20px;
+    padding: 20px;
     border-radius: 10px;
-    width: 340px;
-    overflow: auto;
-    padding-right: 10px;
+    width: 100%;
+    max-width: 340px;
 }
-.card-paragraph{
+
+.card-paragraph {
     color: #8B8B8B;
+    margin: 15px 0;
 }
-#card-paragraph{
+
+#card-paragraph {
     color: black;
+    margin: 15px 0;
 }
-.list{
-    color:#666666 ;
+
+.list, #list {
+    margin: 15px 0;
+    line-height: 1.8;
 }
-#list{
-    color: black;
+
+.list i, #list i {
+    margin-right: 8px;
+    color: #2858FF;
 }
-.pricing-button{
-    width: 270px;
+
+.pricing-button, #pricing-button {
+    width: 100%;
+    max-width: 270px;
     height: 44px;
     border-radius: 4px;
     display: block;
     margin: 20px auto 0;
+    font-family: Inter;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.pricing-button {
     background-color: #FFFFFF;
     color: #2F2F2F;
-    font-family: Inter;
-    cursor: pointer;
+    border: 1px solid #ddd;
 }
-#pricing-button{
-    width: 270px;
-    height:44px ;
-    border-radius: 4px;
-    border-style: none;
-    display: block;
-    margin: 20px auto 0;
+
+.pricing-button:hover {
+    background-color: #f0f0f0;
+}
+
+#pricing-button {
     background-color: black;
     color: white;
-    margin-bottom: 20px;
-    font-family: Inter;
-    cursor: pointer;
-}
-.contact-me{
-    text-decoration: none;
-    font-family: Inter;
-}
-#contact-me{
-    text-decoration: none;
-    font-family: Inter;
-}
-#faq-div {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 20px;
-  font-family: 'Inter', sans-serif;
+    margin-bottom: 0;
 }
 
+#pricing-button:hover {
+    background-color: #333;
+}
+
+.contact-me, #contact-me {
+    text-decoration: none;
+    font-family: Inter;
+    color: inherit;
+}
+
+/* FAQ Section */
+#faq-div {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+}
 
 .details {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-bottom: 12px;
-  overflow: hidden;
-  transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
-
 
 .faq-questions {
-  position: relative;
-  padding: 16px 50px 16px 16px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  list-style: none;
-  font-family: Poppins;
+    position: relative;
+    padding: 16px 50px 16px 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    font-family: Poppins;
 }
-
 
 .faq-questions::-webkit-details-marker,
 .faq-questions::marker {
-  display: none;
+    display: none;
 }
-
 
 .faq-questions::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  transform: translateY(-50%) rotate(45deg);
-  border: solid #333;
-  border-width: 2px 2px 0 0;
-  padding: 5px;
-  transition: transform 0.3s ease;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%) rotate(45deg);
+    border: solid #333;
+    border-width: 2px 2px 0 0;
+    padding: 5px;
+    transition: transform 0.3s ease;
 }
-
 
 .details[open] .faq-questions::after {
-  transform: translateY(-50%) rotate(135deg);
+    transform: translateY(-50%) rotate(135deg);
 }
-
 
 .faq-answers {
-  padding: 0 16px 16px 16px;
-  line-height: 1.6;
-  color: #444;
-  font-family: Inter;
+    padding: 0 16px 16px 16px;
+    line-height: 1.6;
+    color: #444;
+    font-family: Inter;
 }
-footer{
+
+
+footer {
     background-color: #000000;
     color: #FFFFFF;
     text-align: center;
     font-family: Poppins;
     font-weight: 500;
-    font-size: 12px;
-    justify-content: center;
-    height: 50px;
+    font-size: 0.75rem;
+    height: 60px;
     display: flex;
     align-items: center;
-    padding-top: 10px;
-    line-height: 100%;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    #hero-section {
+        flex-direction: row;
+        align-items: center;
+        padding: 40px;
+    }
+
+    #hero-text {
+        width: 50%;
+        order: 1;
+        padding: 20px 40px 20px 0;
+    }
+
+    #image-wrapper {
+        width: 50%;
+        order: 2;
+    }
+
+    #hero-image {
+        margin: 0;
+    }
+
+  .project-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+    .project-name-description {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    #project-card-one,
+    #project-card-two,
+    #project-card-three {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 992px) {
+    #hero-section {
+        padding: 60px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
 }
