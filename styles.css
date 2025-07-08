@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, #FFD748 10%, #FFF8F0 90%);
+    background: linear-gradient(to bottom, #FFD748 5%, #FFF8F0 95%);
     background-attachment: fixed;
     min-height: 100vh;
     font-family: "Inter", sans-serif;
